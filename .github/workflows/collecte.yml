@@ -22,6 +22,8 @@ jobs:
           python collecte.py
     - name: Push changes
       run: |
+        git config --local user.name  ${{ github.actor }}
+        git config --local user.email  ${{ github.actor }}@localhost
         git add current.csv
         git add archives/
         git commit -m "Adds latest ANJ file"
