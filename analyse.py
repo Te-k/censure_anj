@@ -15,8 +15,8 @@ def csv_count(fpath) -> (int, int):
         if row[0].lower() not in sites:
             sites.append(row[0].lower())
         domain = row[1].strip().lower()
-        if domain.startswith("www."):
-            domain = domain[4:]
+        #if domain.startswith("www."):
+            #domain = domain[4:]
         if domain not in domains:
             domains.append(domain)
 
